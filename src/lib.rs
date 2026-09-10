@@ -55,7 +55,6 @@
 //! | `attr.is_meta_r()`     | Checks if the right Meta key is pressed   |
 #![no_std]
 
-
 mod keycode;
 pub use keycode::*;
 

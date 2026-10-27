@@ -601,7 +601,7 @@ pub mod KEY {
 }
 
 /// Represents the virtual key codes as an enumeration.
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Key {
     None,
@@ -1133,4 +1133,10 @@ pub enum Key {
     Performance(Attr<{ KEY::PERFORMANCE }>),
     MinInteresting(Attr<{ KEY::MIN_INTERESTING }>),
     Max(Attr<{ KEY::MAX }>),
+}
+
+impl core::fmt::Display for Key {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "{:?}", self)
+    }
 }

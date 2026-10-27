@@ -6,6 +6,7 @@ authors = ["Yutaka Saito <ypsitau@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "Embedded keycode handling library"
 repository = "https://github.com/ypsitau/embedded-keycode"
+readme = { workspace = true }
 
 [features]
 default = []

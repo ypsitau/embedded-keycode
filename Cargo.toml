@@ -5,5 +5,8 @@ members = [
     "main",
 ]
 
+[workspace.package]
+readme = "README.md"
+
 [workspace.dependencies]
 embedded-keycode = { path = "lib" }

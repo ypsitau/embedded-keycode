@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    "lib",
+    "embedded-keycode",
     "main",
 ]
 
@@ -9,4 +9,4 @@ members = [
 readme = "README.md"
 
 [workspace.dependencies]
-embedded-keycode = { path = "lib" }
+embedded-keycode = { path = "embedded-keycode" }

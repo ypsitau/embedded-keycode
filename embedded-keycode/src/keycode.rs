@@ -38,6 +38,8 @@ impl Modifier {
     pub fn is_meta(&self) -> bool       { self.bits & (Self::LEFT_META | Self::RIGHT_META) != 0 }
     pub fn is_meta_l(&self) -> bool     { self.bits & Self::LEFT_META != 0 }
     pub fn is_meta_r(&self) -> bool     { self.bits & Self::RIGHT_META != 0 }
+    pub fn is_none(&self) -> bool       { self.bits == 0 }
+    pub fn is_any(&self) -> bool        { self.bits != 0 }
 }
 
 /// Represents a keyboard attribute with a specific ID and associated modifier keys.
@@ -62,6 +64,8 @@ impl<const ID: u16> Attr<ID> {
     pub fn is_meta(&self) -> bool       { self.modifier.is_meta() }
     pub fn is_meta_l(&self) -> bool     { self.modifier.is_meta_l() }
     pub fn is_meta_r(&self) -> bool     { self.modifier.is_meta_r() }
+    pub fn is_none(&self) -> bool       { self.modifier.is_none() }
+    pub fn is_any(&self) -> bool        { self.modifier.is_any() }
 }
 
 impl<const ID: u16> From<Modifier> for Attr<ID> {

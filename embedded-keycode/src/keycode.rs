@@ -74,6 +74,68 @@ impl<const ID: u16> From<Modifier> for Attr<ID> {
     }
 }
 
+pub mod Ctrl {
+    pub const NUL: u8 = 0x00;
+    pub const SOH: u8 = 0x01;
+    pub const STX: u8 = 0x02;
+    pub const ETX: u8 = 0x03;
+    pub const EOT: u8 = 0x04;
+    pub const ENQ: u8 = 0x05;
+    pub const ACK: u8 = 0x06;
+    pub const BEL: u8 = 0x07;
+    pub const BS: u8 = 0x08;
+    pub const HT: u8 = 0x09;
+    pub const LF: u8 = 0x0A;
+    pub const VT: u8 = 0x0B;
+    pub const FF: u8 = 0x0C;
+    pub const CR: u8 = 0x0D;
+    pub const SO: u8 = 0x0E;
+    pub const SI: u8 = 0x0F;
+    pub const DLE: u8 = 0x10;
+    pub const DC1: u8 = 0x11;
+    pub const DC2: u8 = 0x12;
+    pub const DC3: u8 = 0x13;
+    pub const DC4: u8 = 0x14;
+    pub const NAK: u8 = 0x15;
+    pub const SYN: u8 = 0x16;
+    pub const ETB: u8 = 0x17;
+    pub const CAN: u8 = 0x18;
+    pub const EM: u8 = 0x19;
+    pub const SUB: u8 = 0x1A;
+    pub const ESC: u8 = 0x1B;
+    pub const FS: u8 = 0x1C;
+    pub const GS: u8 = 0x1D;
+    pub const RS: u8 = 0x1E;
+    pub const US: u8 = 0x1F;
+    pub const DEL: u8 = 0x7F;
+    pub const A: u8 = 0x01;
+    pub const B: u8 = 0x02;
+    pub const C: u8 = 0x03;
+    pub const D: u8 = 0x04;
+    pub const E: u8 = 0x05;
+    pub const F: u8 = 0x06;
+    pub const G: u8 = 0x07;
+    pub const H: u8 = 0x08;
+    pub const I: u8 = 0x09;
+    pub const J: u8 = 0x0A;
+    pub const K: u8 = 0x0B;
+    pub const L: u8 = 0x0C;
+    pub const M: u8 = 0x0D;
+    pub const N: u8 = 0x0E;
+    pub const O: u8 = 0x0F;
+    pub const P: u8 = 0x10;
+    pub const Q: u8 = 0x11;
+    pub const R: u8 = 0x12;
+    pub const S: u8 = 0x13;
+    pub const T: u8 = 0x14;
+    pub const U: u8 = 0x15;
+    pub const V: u8 = 0x16;
+    pub const W: u8 = 0x17;
+    pub const X: u8 = 0x18;
+    pub const Y: u8 = 0x19;
+    pub const Z: u8 = 0x1A;
+}
+
 #[allow(non_snake_case)]
 pub mod KEY {
     pub const RESERVED: u16 =                   0;

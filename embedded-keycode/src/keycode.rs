@@ -74,6 +74,7 @@ impl<const ID: u16> From<Modifier> for Attr<ID> {
     }
 }
 
+#[allow(non_snake_case)]
 pub mod Ctrl {
     pub const NUL: u8 = 0x00;
     pub const SOH: u8 = 0x01;

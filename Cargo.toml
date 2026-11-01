@@ -2,7 +2,7 @@
 resolver = "2"
 members = [
     "embedded-keycode",
-    "main",
+    "apps/host",
 ]
 
 [workspace.package]

@@ -1,3 +1,13 @@
+pub trait ReadKey {
+    type Error;
+    fn read_key(&mut self) -> impl core::future::Future<Output = Result<Key, Self::Error>>;
+}
+
+pub trait ReadKeyBlocking {
+    type Error;
+    fn read_key_blocking(&mut self) -> Result<Key, Self::Error>;
+}
+
 #[derive(Debug, Clone, Copy, Default)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub struct Modifier {

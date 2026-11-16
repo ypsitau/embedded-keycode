@@ -1235,8 +1235,8 @@ impl core::fmt::Display for Key {
                     Key::None => write!($formatter, "None"),
                     Key::CookedChar(ch) => write!($formatter, "CookedChar('{}')", ch),
                     Key::CookedCtrl(n) => write!($formatter, "CookedCtrl(0x{:02x})", n),
-                    Key::CursorPositionReport(row, col) => write!($formatter, "CursorPositionReport({}, {})", row, col),
-                    Key::TextAreaSizeReport(width, height) => write!($formatter, "TextAreaSizeReport({}, {})", width, height),
+                    Key::CursorPositionReport(i_col, i_row) => write!($formatter, "CursorPositionReport({}, {})", i_col, i_row),
+                    Key::TextAreaSizeReport(n_cols, n_rows) => write!($formatter, "TextAreaSizeReport({}, {})", n_cols, n_rows),
                     $(
                         Key::$variant(attr) => {
                             with_modifier($formatter, stringify!($variant), attr.modifier())

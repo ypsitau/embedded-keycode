@@ -684,6 +684,8 @@ pub enum Key {
     None,
     CookedChar(char),
     CookedCtrl(u8),
+    CursorPositionReport(u16, u16),
+    TextAreaSizeReport(u16, u16),
     Reserved(Attr<{ KEY::RESERVED }>),
     Esc(Attr<{ KEY::ESC }>),
     Num1(Attr<{ KEY::NUM1 }>),
@@ -1233,6 +1235,8 @@ impl core::fmt::Display for Key {
                     Key::None => write!($formatter, "None"),
                     Key::CookedChar(ch) => write!($formatter, "CookedChar('{}')", ch),
                     Key::CookedCtrl(n) => write!($formatter, "CookedCtrl(0x{:02x})", n),
+                    Key::CursorPositionReport(row, col) => write!($formatter, "CursorPositionReport({}, {})", row, col),
+                    Key::TextAreaSizeReport(width, height) => write!($formatter, "TextAreaSizeReport({}, {})", width, height),
                     $(
                         Key::$variant(attr) => {
                             with_modifier($formatter, stringify!($variant), attr.modifier())
